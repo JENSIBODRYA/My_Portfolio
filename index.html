@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY_PORTFOLIO</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- link for internal css -->
+    <style>
+        * {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            outline: none;
+            border: none;
+            text-decoration: none;
+            text-transform: capitalize;
+            transition: all 0.2s linear;
+            line-height: 1.5;
+        }
+
+        html {
+            font-size: 62.5%;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        .home {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .home .image {
+            flex: 1 1 20rem;
+        }
+
+        .home .image img {
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+        }
+
+        .home .content {
+            flex: 1 1 40rem;
+        }
+
+        .home .content .hi {
+            font-size: 2rem;
+            color: var(--main-color);
+        }
+
+        .home .content h3 {
+            font-size: 4.5rem;
+            color: #111;
+            text-transform: uppercase;
+        }
+
+        .home .content h3 span {
+            /* font-size: 4.5rem; */
+            color: var(--main-color);
+            text-transform: uppercase;
+        }
+
+        .home .content .info {
+            font-size: 2.5rem;
+            color: #111;
+            padding: 0.5rem 0;
+        }
+
+        .home .content .text {
+            font-size: 1.7rem;
+            color: #666;
+            padding: 0.5rem 0;
+        }
+
+        #menubar {
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            z-index: 10000;
+            background: var(--main-color);
+            color: #fff;
+            border-radius: 0.5rem;
+            padding: 1rem 1.5rem;
+            font-size: 3rem;
+            cursor: pointer;
+            display: none;
+        }
+
+        .about .row {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            padding-bottom: 2rem;
+        }
+
+
+        .about .row .infocontainer {
+            flex: 1 1 42rem;
+        }
+
+        .about .row .infocontainer h1 {
+            font-size: 4rem;
+            color: var(--main-color);
+            text-transform: uppercase;
+            padding-bottom: 1rem;
+        }
+
+        .about .row .infocontainer .boxcontainer {
+            padding: 1rem 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2.5rem;
+        }
+
+        .about .row .infocontainer .boxcontainer .box {
+            flex: 1 1 20rem;
+        }
+
+        .about .row .infocontainer .boxcontainer .box h3 {
+            font-size: 1.3rem;
+            color: #333;
+            padding: 1rem 0;
+            font-weight: bold;
+        }
+
+        .about .row .infocontainer .boxcontainer .box span {
+            color: var(--main-color);
+            font-weight: lighter;
+        }
+
+        .about .row .countcontainer {
+            flex: 1 1 42rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .about .row .countcontainer .box {
+            flex: 1 1 20rem;
+            padding: 3rem 4rem;
+            border-radius: 0.5rem;
+            background: #fff;
+            box-shadow: 0 0.5rem 1rem rgb(0, 0, 0, 0.1);
+        }
+
+        .about .row .countcontainer .box h3 {
+            font-size: 5rem;
+            color: var(--main-color);
+        }
+
+        .about .row .countcontainer .box p {
+            font-size: 2rem;
+            color: #666;
+        }
+    </style>
+
+    <!-- link for external css -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body style="background: #fcf2e8; padding-left: 30rem;">
+
+    <div id="menubar" class="fas fa-bars"></div>
+
+    <!-- heading section -->
+    <header>
+        <a href="#" class="logo"><span>Jensi</span> Bodrya</a>
+
+        <nav class="navbar">
+            <a href="#home">home</a>
+            <a href="#about">about</a>
+            <a href="#service">services</a>
+            <a href="#experience">education</a>
+            <a href="#portfolio">projects</a>
+            <a href="#contact">contact</a>
+        </nav>
+
+        <div class="follow">
+            <a href="https://www.facebook.com/" class="fab fa-facebook"></a>
+            <a href="https://www.instagram.com/" class="fab fa-instagram"></a>
+            <a href="https://twitter.com/i/flow/login" class="fab fa-twitter"></a>
+            <a href="https://www.linkedin.com/in/jensi-bodrya/" class="fab fa-linkedin"></a>
+            <a href="https://github.com/JENSIBODRYA" class="fab fa-github"></a>
+        </div>
+
+    </header>
+
+    <!-- home section -->
+    <section class="home" id="home" style=" padding: 1rem 5%;min-height: 100vh;">
+        <div class="content">
+            <span class="hi">Hi There...</span>
+            <h3>I am <span> Jensi Bodrya </span></h3>
+            <p class="info">I am a Front-end Developer</p>
+            <p class="text">I am enthusiast of development. Currently upgrading myself by learning new things every day!
+            </p>
+            <a href="#about" class="btn">ABOUT ME</a>
+        </div>
+
+        <div class="image">
+            <img src="IMG-20210201-WA0013.jpg" alt="">
+        </div>
+    </section>
+
+    <!-- about section -->
+    <section class="about" id="about" style=" padding: 1rem 5%;min-height: 100vh;">
+        <h1 class="heading"><span style="text-transform: uppercase;">about </span>me</h1>
+
+        <div class="row">
+            <div class="infocontainer">
+                <h1>personal info</h1>
+                <div class="boxcontainer">
+                    <div class="box">
+                        <h3><span>name :</span> Jensi Bodrya</h3>
+                        <h3><span>age :</span> 20</h3>
+                        <h3><span>e-mail :</span> jensibodrya@gmail.com</h3>
+                        <h3><span>address :</span> surat ,india-394101</h3>
+                    </div>
+                    <div class="box">
+                        <h3><span>hobbies :</span> reading books</h3>
+                        <h3><span>skill :</span> problem solving</h3>
+                        <h3><span>languages :</span> english, hindi, gujarati</h3>
+                        <h3><span>experience :</span> 1 year</h3>
+                    </div>
+                </div>
+                <a href="#" class="btn">download cv <i class="fas fa-download"></i></a>
+            </div>
+
+            <div class="countcontainer">
+                <div class="box">
+                    <h3> 4+ </h3>
+                    <p>projects completed</p>
+                </div>
+                <div class="box">
+                    <h3> 5+ </h3>
+                    <p>certifications</p>
+                </div>
+                <div class="box">
+                    <h3> 0.5+ </h3>
+                    <p>experience</p>
+                </div>
+                <div class="box">
+                    <h3> 1+ </h3>
+                    <p>ongoing projects</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- skill section -->
+    <section class="skill" id="skill" style=" padding: 1rem 5%;min-height: 100vh;">
+        <h1 class="heading"><span style="text-transform: uppercase;">my</span> skills</h1>
+
+        <div class="boxcontainer">
+            <div class="box">
+                <img src="Designbolts-Cute-Social-2014-HTML5.ico" alt="">
+                <h3>html</h3>
+            </div>
+            <div class="box">
+                <img src="kisspng-angle-text-symbol-brand-other-python-5ab0c09b9ea1a7.3286927515215330836498.png" alt="">
+                <h3>python</h3>
+            </div>
+            <div class="box">
+                <img src="kisspng-bootstrap-responsive-web-design-web-development-lo-5af676c0755361.6918533815261016964806.png" alt="">
+                <h3>bootstrap</h3>
+            </div>
+            <div class="box">
+                <img src="kisspng-github-version-control-repository-commit-tocode-pull-request-5b818cb3473a20.6676436915352168192918.png" alt="">
+                <h3>github</h3>
+            </div>
+            <div class="box">
+                <img src="kisspng-figma-user-interface-design-designer-logo-apps-design-5ae2b107816577.63914842152480589553.png" alt="">
+                <h3>figma</h3>
+            </div>
+            <div class="box">
+                <img src="kisspng-java-runtime-environment-computer-icons-java-platf-java-5ade3063f31610.0948145615245108199957.png" alt="">
+                <h3>java</h3>
+            </div>
+            <div class="box">
+                <img src="kisspng-javascript-logo-html-clip-art-javascript-logo-5b5188b1a2a1f9.2428698915320700656662.png" alt="">
+                <h3>javascript</h3>
+            </div>
+            <div class="box">
+                <img src="kisspng-matlab-mathworks-simulink-statistical-parametric-m-toolbox-pictures-5aaccffeee29d2.1385471915212748789755.png" alt="">
+                <h3>matlab</h3>
+            </div>
+            <div class="box">
+                <img src="kisspng-the-c-programming-language-computer-icons-comput-programming-5acadc2e16ef78.280689641523244078094.png" alt="">
+                <h3>c++</h3>
+            </div>
+            <div class="box">
+                <img src="kisspng-web-development-cascading-style-sheets-css3-comput-css-5ada20be5eed10.7390827615242446703888.png" alt="">
+                <h3>css</h3>
+            </div>
+            <div class="box">
+                <img src="5a219145388087.5866319615121493172314.png" alt="">
+                <h3>photoshop</h3>
+            </div>
+            <div class="box">
+                <img src="5a36954d40bea2.0735336615135266052652.png" alt="">
+                <h3>c</h3>
+            </div>
+
+           
+        </div>
+    </section>
+
+    <!-- service section -->
+    <section class="service" id="service" style=" padding: 1rem 5%;min-height: 100vh;">
+        <h1 class="heading"><span style="text-transform: uppercase;"> my</span> services</h1>
+
+        <div class="boxcontainer">
+            <div class="box">
+                <i class="fas fa-code"></i>
+                <h3>web design</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae consequatur quae maiores
+                    excepturi enim, eius itaque neque consectetur. Iusto, omnis.</p>
+            </div>
+            <div class="box">
+                <i class="fas fa-paint-brush"></i>
+                <h3>graphic design</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae consequatur quae maiores
+                    excepturi enim, eius itaque neque consectetur. Iusto, omnis.</p>
+            </div>
+            <div class="box">
+                <i class="fas fa-mobile"></i>
+                <h3>responsive design</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae consequatur quae maiores
+                    excepturi enim, eius itaque neque consectetur. Iusto, omnis.</p>
+            </div>
+            <div class="box">
+                <i class="fas fa-bullhorn"></i>
+                <h3>marketing</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae consequatur quae maiores
+                    excepturi enim, eius itaque neque consectetur. Iusto, omnis.</p>
+            </div>
+            <div class="box">
+                <i class="fas fa-chart-line"></i>
+                <h3>digital marketing</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae consequatur quae maiores
+                    excepturi enim, eius itaque neque consectetur. Iusto, omnis.</p>
+            </div>
+            <div class="box">
+                <i class="fas fa-envelope"></i>
+                <h3>email design</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae consequatur quae maiores
+                    excepturi enim, eius itaque neque consectetur. Iusto, omnis.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- education section -->
+    <section class="experience" id="experience" style=" padding: 1rem 5%;min-height: 100vh;">
+        <h1 class="heading"><span style="text-transform: uppercase;">my</span> education</h1>
+
+        <div class="boxcontainer">
+            <div class="box">
+                <div class="content">
+                    <span> 2020 - 2024 </span>
+                    <h3>Nirma University</h3>
+                    <p> currently pursuing btech. computer science enginnering</p>
+                    <p>SPI:- 9</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="content">
+                    <span> 2018 - 2020 </span>
+                    <h3>Ashadeep International school</h3>
+                    <p>passed hsc at ashadeep international school</p>
+                    <p>percentage :- 89%</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="content">
+                    <span> 2017 - 2018 </span>
+                    <h3>Gajera international school</h3>
+                    <p>passed ssc at gajera international school</p>
+                    <p>percentage :- 95%</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="content">
+                    <span> 2011 - 2017 </span>
+                    <h3>Gajera international school</h3>
+                    <p>Passed my schooling days</p>
+                    <p>passed with good grades</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- project section -->
+    <section class="portfolio" id="portfolio" style=" padding: 1rem 5%;min-height: 100vh;">
+        <h1 class="heading"><span style="text-transform: uppercase;">my</span> portfolio</h1>
+
+        <div class="boxcontainer">
+            <div class="box">
+                <img src="project-management-background-concept-of-office-vector-23026473.jpg" alt="">
+                <h3>project 01</h3>
+                <div class="icon">
+                    <a href="https://github.com/JENSIBODRYA/Candy_Box_Game" class="fas fa-link"></a>
+                    <a href="#" class="fas fa-share"></a>
+                    <a href="#" class="fas fa-search"></a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="project-management-background-concept-of-office-vector-23026473.jpg" alt="">
+                <h3>project 02</h3>
+                <div class="icon">
+                    <a href="https://github.com/JENSIBODRYA/Dice_Roller_Simulator" class="fas fa-link"></a>
+                    <a href="#" class="fas fa-share"></a>
+                    <a href="#" class="fas fa-search"></a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="project-management-background-concept-of-office-vector-23026473.jpg" alt="">
+                <h3>project 03</h3>
+                <div class="icon">
+                    <a href="https://github.com/JENSIBODRYA/Weather_Prediction" class="fas fa-link"></a>
+                    <a href="#" class="fas fa-share"></a>
+                    <a href="#" class="fas fa-search"></a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="project-management-background-concept-of-office-vector-23026473.jpg" alt="">
+                <h3>project 04</h3>
+                <div class="icon">
+                    <a href="https://github.com/JENSIBODRYA/My_portfolio.github.io.git" class="fas fa-link"></a>
+                    <a href="#" class="fas fa-share"></a>
+                    <a href="#" class="fas fa-search"></a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="project-management-background-concept-of-office-vector-23026473.jpg" alt="">
+                <h3>project 05</h3>
+                <div class="icon">
+                    <a href="https://github.com/JENSIBODRYA/Financial_Calculator.git" class="fas fa-link"></a>
+                    <a href="#" class="fas fa-share"></a>
+                    <a href="#" class="fas fa-search"></a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="project-management-background-concept-of-office-vector-23026473.jpg" alt="">
+                <h3>project 06</h3>
+                <div class="icon">
+                    <a href="https://github.com/JENSIBODRYA/My_Service_for_frontend.git" class="fas fa-link"></a>
+                    <a href="#" class="fas fa-share"></a>
+                    <a href="#" class="fas fa-search"></a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- contact section -->
+    <section class="contact" id="contact" style=" padding: 1rem 5%;min-height: 100vh;">
+        <h1 class="heading"><span style="text-transform: uppercase;">contact</span> me</h1>
+
+        <div class="iconcontainer">
+            <div class="icon">
+                <i class="fas fa-envelope"></i>
+                <h3>my email</h3>
+                <p>jensibodrya@gmail.com</p>
+            </div>
+
+            <div class="icon">
+                <i class="fas fa-phone"></i>
+                <h3>my phoneno</h3>
+                <p>+91 8141807761</p>
+            </div>
+
+            <div class="icon">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>my address</h3>
+                <p>8, hariom bunglaws, motavarachha, surat, india-394101</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <form action="">
+                <input id="name" type="text" placeholder="Name" class="box">
+                <input id="email" type="email" placeholder="E-mail" class="box">
+                <input id="phone" type="number" placeholder="Contact No" class="box">
+                <textarea id="msg" name="" placeholder="Message" id="" cols="30" rows="10"></textarea>
+                <input type="submit" class="btn" id="btn" value="Send Message">
+            </form>
+            <iframe class="map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119008.25250548008!2d72.87915841669069!3d21.231535687298265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04f410e323423%3A0xb6bc097308557d0d!2sHari%20Om%20Row-House!5e0!3m2!1sen!2sin!4v1645249002328!5m2!1sen!2sin"
+                allowfullscreen="" loading="lazy"></iframe>
+        </div>
+
+    </section>
+
+    <!-- footer section -->
+    <footer style=" margin-top: 2rem;font-size: 2rem;padding: 2.5rem;text-align: center;color: #666;background: #fff;">
+        created by <span> Jensi</span> | all right reserved!</footer>
+
+    <script src="main.js"></script>
+    
+</body>
+
+</html>
